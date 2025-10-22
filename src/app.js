@@ -13,11 +13,11 @@ export const createApp = () => {
     app.use(cors({ origin: env.corsOrigin }))
     app.use(rateLimit({ windowMs: 60_000, max: 100}))
 
-    app.get("/health", (_request, response) => {
+    app.get("/health",  (_request, response) => {
         response.json({ok: true})
     })
 
     app.use(errorHandler)
-    
+
     return app;
 }

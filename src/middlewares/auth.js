@@ -34,6 +34,5 @@ export const ensureAuth = (request, _response, next) => {
             status: 401,
             code: "UNATHORIZED"
         })
-
     }
 }
